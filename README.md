@@ -1,5 +1,6 @@
 # Hi there 👋 
 A CS student 👨🏻‍🎓 and a lazy programmer 💤
+<br><br>
 ![](https://komarev.com/ghpvc/?username=chetra-seng)
 
 ## About Me
