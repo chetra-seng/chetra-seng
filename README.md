@@ -1,7 +1,9 @@
 # Hi there 👋 
 A CS student 👨🏻‍🎓 and a lazy programmer 💤
-<br><br>
-![](https://komarev.com/ghpvc/?username=chetra-seng)
+<p align="center">
+    <a href="https://github.com/chetra-seng"><img src="https://github.com/chetra-seng/chetra-seng/blob/output/github-contribution-grid-snake.svg"></a>
+</p>
+<a href="https://github.com/chetra-seng"><img src="https://komarev.com/ghpvc/?username=chetra-seng"><a/>
 
 ## About Me
 - 👨🏻‍💻 Full-stack Developer
