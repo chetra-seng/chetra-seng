@@ -34,6 +34,8 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.gif
             dist/github-contribution-grid-snake.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
      # show the status of the build. Makes it easier for debugging (if there's any issues).
       - run: git status
