@@ -30,5 +30,5 @@
         <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-gules-gamma-14.vercel.app/api?username=chetra-seng&theme=aura">
         <img style="height: 12rem" alt="Github Stats" src="https://github-readme-stats-gules-gamma-14.vercel.app/api?username=chetra-seng&theme=aura">
     </picture>
-    <img style="height: 12rem; width: 45%;" alt="Most used languages" src="https://github-readme-stats-gules-gamma-14.vercel.app/api/top-langs/?username=chetra-seng&hide=html,css,less,cmake,php,blade,scss&layout=compact&langs_count=6&hide_title=true&theme=aura">
+    <img style="height: 12rem; width: 45%;" alt="Most used languages" src="https://github-readme-stats-gules-gamma-14.vercel.app/api/top-langs/?username=chetra-seng&hide=html,css,less,cmake,php,blade,scss,c%2B%2B&layout=compact&langs_count=6&hide_title=true&theme=aura">
 </p>
