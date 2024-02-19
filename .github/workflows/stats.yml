@@ -1,0 +1,56 @@
+name: Cache GitHub Stats
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  schedule:
+    # every 6 hours
+    - cron: "0 */6 * * *"
+
+jobs:
+  download-assets:
+    runs-on: ubuntu-latest
+    name: Download assets
+
+    steps:
+      - name: Download stats file
+        run: curl 'https://github-readme-stats-gules-gamma-14.vercel.app/api?username=chetra-seng&theme=default' -o stats.svg
+      - name: Download stats dark file
+        run: curl 'https://github-readme-stats-gules-gamma-14.vercel.app/api?username=chetra-seng&theme=aura' -o stats-dark.svg
+
+      - name: Download top languages file
+        run: curl 'https://github-readme-stats-gules-gamma-14.vercel.app/api/top-langs/?username=chetra-seng&hide=html,css,less,cmake,php,blade,scss,c%2B%2B&layout=compact&langs_count=6&hide_title=true&theme=default' -o top-langs.svg
+      - name: Download top languages dark file
+        run: curl 'https://github-readme-stats-gules-gamma-14.vercel.app/api/top-langs/?username=chetra-seng&hide=html,css,less,cmake,php,blade,scss,c%2B%2B&layout=compact&langs_count=6&hide_title=true&theme=aura' -o top-langs-dark.svg
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: assets
+          path: |
+            stats.svg
+            stats-dark.svg
+            top-langs.svg
+            top-langs-dark.svg
+
+  push-assets:
+    runs-on: ubuntu-latest
+    name: Push assets
+    needs: [download-assets]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: assets
+          path: assets
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: "chore(assets): update cached GRS files"
+          branch: main
+          commit_user_name: github-readme-stats 🤖
+          commit_user_email: actions@github.com
+          commit_author: github-readme-stats 🤖 <actions@github.com>
