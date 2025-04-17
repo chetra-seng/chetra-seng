@@ -21,10 +21,9 @@
 ## About Me
 
 - 👨🏻‍💻 Full-stack Developer
-- 🌱 Still learning Spring framework
-- 👯 Looking to collaborate on open source projects
+- ~~🌱 Spring framework~~ 🦫 Learning Go
+- 💻 Looking to collaborate on open source projects
 - 🍀 Trying to be productive and organized
-- ❌ I hate Angular
 - 💬 Ask me about anything
 
 ## GitHub's Stats
