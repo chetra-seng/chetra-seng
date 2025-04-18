@@ -72,7 +72,7 @@ jobs:
         id: stats-streak
         name: Download stats streak
         with:
-          url: "https://github-readme-streak-stats-nine-liard.vercel.app?user=chetra-seng&theme=transparent&card_width=470&card_height=150"
+          url: "https://github-readme-streak-stats-nine-liard.vercel.app?user=chetra-seng&theme=transparent"
           target: stats-dist
           filename: stats-streak.svg
 
