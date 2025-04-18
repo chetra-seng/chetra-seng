@@ -62,11 +62,26 @@ jobs:
           url: "https://github-readme-stats-gules-gamma-14.vercel.app/api/top-langs/?username=chetra-seng&hide=html,css,less,cmake,php,blade,scss,c%2B%2B&layout=compact&langs_count=6&hide_title=true&theme=aura" 
           target: stats-dist
           filename: top-lang-dark.svg
-          
+
       - uses: actions/upload-artifact@master
         with:
           name: top-lang-dark
           path: stats-dist
+          
+      - uses: suisei-cn/actions-download-file@v1.3.0
+        id: stats-streak
+        name: Download stats streak
+        with:
+          url: "https://github-readme-streak-stats-nine-liard.vercel.app?user=chetra-seng&theme=transparent"
+          target: stats-dist
+          filename: stats-streak.svg
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: stats-streak
+          path: stats-dist
+          
+      
 
   push:
     permissions: write-all
@@ -117,7 +132,21 @@ jobs:
         with:
           name: top-lang-dark
           path: stats-dist
+          
       - name: Push Top Lang Dark
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: stats-outputs
+          build_dir: stats-dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - uses: actions/download-artifact@master
+        with:
+          name: stats-streak
+          path: stats-dist
+          
+      - name: Push Stats Streak
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: stats-outputs
