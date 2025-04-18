@@ -41,4 +41,7 @@
             <img alt="Top Languages" src="https://raw.githubusercontent.com/chetra-seng/chetra-seng/stats-outputs/top-lang-dark.svg" width="48%" height="100%">
         </picture>
     </a>
+    <a href="https://github.com/chetra-seng">
+        <img alt="Stats Streak" src="https://raw.githubusercontent.com/chetra-seng/chetra-seng/stats-outputs/stats-streak.svg" width="100%" height="100%">
+    </a>
 </p>
